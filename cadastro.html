@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>Cadastrar Usuário</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light" >
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="./img/bootstrap-solid.png" alt="" width="90" height="70">
+        <h2>Faça o seu cadastro!</h2>
+        <p class="lead">Administre suas finanças, no sistema online de acompanhamento de contas.</p>
+      </div>
+      <div class="row">
+        <div class="offset-md-2 col-md-8 order-md-1">
+          <h4 class="mb-3">Informações Iniciais</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nome</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Nome" value="" required>
+                <div class="invalid-feedback">
+                  Nome Inválido.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Sobrenome</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Sobrenome" value="" required>
+                <div class="invalid-feedback">
+                  Sobrenome Inválido.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Por Favor, digite um nome de usuário válido!
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="seu@exemplo.com">
+              <div class="invalid-feedback">
+                Por Favor, digite um endereço de email válido.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Senha</label>
+              <input type="password" class="form-control" id="address" placeholder="Senha" required>
+              <div class="invalid-feedback">
+                Por Favor, insira uma senha válido.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Telefone <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="(99) 9 9999-9999">
+            </div>
+            <button onclick="myFunction()" class="btn btn-primary btn-lg btn-block" type="submit" >Cadastrar</button>
+          </form>
+		  </br>
+		  <a href="index.html" ><p align="center">Já sou cadastrado...</p><a/>
+		  
+        </div>
+      </div>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy;2018 Nexti - Núcleo de Extenção de Tecnologia da Informação.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacidade</a></li>
+          <li class="list-inline-item"><a href="#">Termos</a></li>
+          <li class="list-inline-item"><a href="#">Suporte</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+function myFunction() {
+    alert("Se os dados foram inseridos corretamente, clique no botão abaixo para ignorar esta página, e faça login :D")
+    alert("Cadastrado com sucesso!");
+  }
+
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>
